@@ -301,9 +301,10 @@ class ChewieController extends ChangeNotifier {
       await videoPlayerController.seekTo(startAt);
     }
 
-    if (fullScreenByDefault) {
-      videoPlayerController.addListener(_fullScreenListener);
-    }
+    //尊重用户选择 退出全屏不在进入全屏
+//    if (fullScreenByDefault) {
+//      videoPlayerController.addListener(_fullScreenListener);
+//    }
   }
 
   void _fullScreenListener() async {
